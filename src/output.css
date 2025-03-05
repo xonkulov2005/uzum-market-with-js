@@ -574,6 +574,9 @@
       height: calc(0.25rem * 8);
     }
   }
+  .relative {
+    position: relative;
+  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
