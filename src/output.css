@@ -1468,17 +1468,8 @@
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
-  .top-1\.5 {
-    top: calc(var(--spacing) * 1.5);
-  }
-  .top-2 {
-    top: calc(var(--spacing) * 2);
-  }
   .right-1 {
     right: calc(var(--spacing) * 1);
-  }
-  .left-2 {
-    left: calc(var(--spacing) * 2);
   }
   .textarea {
     border: var(--border) solid #0000;
@@ -1962,11 +1953,17 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -2029,16 +2026,6 @@
     font-size: 0.875rem;
     font-weight: 600;
   }
-  .badge-lg {
-    --size: calc(var(--size-selector, 0.25rem) * 7);
-    font-size: 1rem;
-    padding-inline: calc(0.25rem * 3.5 - var(--border));
-  }
-  .badge-md {
-    --size: calc(var(--size-selector, 0.25rem) * 6);
-    font-size: 0.875rem;
-    padding-inline: calc(0.25rem * 3 - var(--border));
-  }
   .badge-sm {
     --size: calc(var(--size-selector, 0.25rem) * 5);
     font-size: 0.75rem;
@@ -2079,10 +2066,10 @@
     --btn-p: 1rem;
     --size: calc(var(--size-field, 0.25rem) * 10);
   }
-  .btn-xs {
-    font-size: 0.6875rem;
-    --btn-p: 0.5rem;
-    --size: calc(var(--size-field, 0.25rem) * 6);
+  .btn-sm {
+    font-size: 0.75rem;
+    --btn-p: 0.75rem;
+    --size: calc(var(--size-field, 0.25rem) * 8);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -2177,6 +2164,14 @@
       --btn-noise: none;
     }
   }
+  .btn-accent {
+    --btn-color: var(--color-accent);
+    --btn-fg: var(--color-accent-content);
+  }
+  .btn-neutral {
+    --btn-color: var(--color-neutral);
+    --btn-fg: var(--color-neutral-content);
+  }
   .btn-primary {
     --btn-color: var(--color-primary);
     --btn-fg: var(--color-primary-content);
@@ -2246,87 +2241,87 @@
     max-width: var(--container-6xl);
     padding-inline: calc(var(--spacing) * 5);
   }
-}
-.loader {
-  transform: rotateZ(45deg);
-  perspective: 1000px;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  color: #fff;
-}
-.loader:before, .loader:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  transform: rotateX(70deg);
-  animation: 1s spin linear infinite;
-}
-.loader:after {
-  color: #ff3d00;
-  transform: rotateY(70deg);
-  animation-delay: 0.4s;
-}
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, -50%) rotateZ(0deg);
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
   }
-  100% {
-    transform: translate(-50%, -50%) rotateZ(360deg);
+  .loader:before, .loader:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
   }
-}
-@keyframes rotateccw {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+  .loader:after {
+    color: #ff3d00;
+    transform: rotateY(70deg);
+    animation-delay: 0.4s;
   }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
   }
-}
-@keyframes spin {
-  0%, 100% {
-    box-shadow: 0.2em 0px 0 0px currentcolor;
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
   }
-  12% {
-    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  @keyframes spin {
+    0%, 100% {
+      box-shadow: 0.2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: 0.2em 0.2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 0.2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -0.2em 0.2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -0.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -0.2em -0.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -0.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: 0.2em -0.2em 0 0 currentcolor;
+    }
   }
-  25% {
-    box-shadow: 0 0.2em 0 0px currentcolor;
+  .loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(35, 38, 38, 0.165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  37% {
-    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  .hidden {
+    display: none;
   }
-  50% {
-    box-shadow: -0.2em 0 0 0 currentcolor;
-  }
-  62% {
-    box-shadow: -0.2em -0.2em 0 0 currentcolor;
-  }
-  75% {
-    box-shadow: 0px -0.2em 0 0 currentcolor;
-  }
-  87% {
-    box-shadow: 0.2em -0.2em 0 0 currentcolor;
-  }
-}
-.loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(35, 38, 38, 0.165);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hidden {
-  display: none;
 }
 @layer base {
   :where(:root),:root:has(input.theme-controller[value=light]:checked),[data-theme=light] {
