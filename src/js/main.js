@@ -10,3 +10,14 @@ fetchData("https://dummyjson.com/product")
   .catch((error) => {
     console.log(error);
   });
+document.addEventListener("DOMContentLoaded", function () {
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+
+  loaderWrapper.classList.remove("hidden");
+
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      loaderWrapper.classList.add("hidden");
+    }, 500);
+  });
+});

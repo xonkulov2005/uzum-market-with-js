@@ -51,3 +51,14 @@ function displayProduct(product) {
 `;
   document.body.appendChild(container);
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const loaderWrapper = document.querySelector(".loader-wrapper");
+
+  loaderWrapper.classList.remove("hidden");
+
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      loaderWrapper.classList.add("hidden");
+    }, 500);
+  });
+});
