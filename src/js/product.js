@@ -16,12 +16,11 @@ fetchData(`https://dummyjson.com/product/${id}`)
 
 function displayProduct(product) {
   document.title = product.title;
-
   const container = document.createElement("div");
   container.className = "main-container py-8";
 
   container.innerHTML = `
-  <div class="grid gap-8 md:grid-cols-2">
+  <div class="grid gap-8 md:grid-cols-2 btn-primary">
     <div class="carousel rounded-box">
       ${product.images
         .map(
@@ -50,6 +49,5 @@ function displayProduct(product) {
     </div>
   </div>
 `;
-
   document.body.appendChild(container);
 }
