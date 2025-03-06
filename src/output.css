@@ -1413,6 +1413,12 @@
       height: calc(0.25rem * 8);
     }
   }
+  .drawer {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-auto-columns: max-content auto;
+  }
   .progress {
     position: relative;
     height: calc(0.25rem * 2);
