@@ -20,7 +20,7 @@ function displayProduct(product) {
   container.className = "main-container py-8";
 
   container.innerHTML = `
-  <div class="grid gap-8 md:grid-cols-2 btn-primary">
+  <div class="grid gap-8 md:grid-cols-2 alert alert-info alert-outline">
     <div class="carousel rounded-box">
       ${product.images
         .map(
