@@ -668,6 +668,9 @@
       height: calc(0.25rem * 8);
     }
   }
+  .relative {
+    position: relative;
+  }
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
