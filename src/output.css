@@ -580,6 +580,9 @@
       height: calc(0.25rem * 8);
     }
   }
+  .relative {
+    position: relative;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
