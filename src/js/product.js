@@ -1,23 +1,24 @@
 import { fetchData } from "./fetchData.js";
 import { showProduct } from "./updateUI.js";
 import "./dark-mode.js";
+
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get("id");
 
 fetchData(`https://dummyjson.com/product/${id}`)
   .then((product) => {
     console.log(product);
-    renderProduct(product);
+    displayProduct(product);
   })
   .catch((error) => {
     console.log(error);
   });
 
-function renderProduct(product) {
+function displayProduct(product) {
   document.title = product.title;
 
-  const container = document.querySelector("div");
-  container.className = "main-container py-10";
+  const container = document.createElement("div");
+  container.className = "main-container py-8";
 
   container.innerHTML = `
   <div class="grid gap-8 md:grid-cols-2">
