@@ -23,7 +23,6 @@
     @apply mx-auto max-w-6xl px-5;
   }
 }
-
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;

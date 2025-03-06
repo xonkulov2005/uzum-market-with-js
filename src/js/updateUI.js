@@ -1,3 +1,4 @@
+
 const template = document.querySelector("template");
 const cardList = document.getElementById("card-list");
 

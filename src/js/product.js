@@ -1,6 +1,6 @@
 import { fetchData } from "./fetchData.js";
 import { showProduct } from "./updateUI.js";
-
+import "./dark-mode.js";
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get("id");
 
@@ -16,7 +16,7 @@ fetchData(`https://dummyjson.com/products/${id}`)
 function renderProduct(product) {
   document.title = product.title;
 
-  const container = document.createElement("div");
+  const container = document.querySelector("div");
   container.className = "main-container py-10";
 
   container.innerHTML = `
