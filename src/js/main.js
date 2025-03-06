@@ -1,8 +1,9 @@
 import "./dark-mode.js";
+
 import { fetchData } from "./fetchData.js";
 import { showCards } from "./updateUI.js";
 
-fetchData("https://dummyjson.com/products?limit=40")
+fetchData("https://dummyjson.com/product")
   .then((data) => {
     showCards(data);
   })
